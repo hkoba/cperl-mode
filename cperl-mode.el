@@ -3943,7 +3943,8 @@ the sections using `cperl-pod-head-face', `cperl-pod-face',
 		      c (and		; not HERE-DOC
 			 (match-beginning 5)
 			 (save-match-data
-			   (or (looking-at "[ \t]*(") ; << function_call()
+			   (or (looking-at ">>") ; <<>> : double-diamond op. See perl5220delta.
+			       (looking-at "[ \t]*(") ; << function_call()
 			       (save-excursion ; 1 << func_name, or $foo << 10
 				 (condition-case nil
 				     (progn

@@ -1146,7 +1146,7 @@ versions of Emacs."
   ;; Calling `cperl-enable-font-lock' below doesn't compile on XEmacs,
   ;; macros instead of defsubsts don't work on Emacs, so we do the
   ;; expansion manually.  Any other suggestions?
-  (require 'cl))
+  (require 'cl-lib))
 
 (defvar cperl-mode-abbrev-table nil
   "Abbrev table in use in CPerl mode buffers.")
